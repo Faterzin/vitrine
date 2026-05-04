@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Novo anúncio — Vitrine</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1><a href="/" style="background:none;color:#fff;padding:0;">← Vitrine</a></h1>
+  </header>
+  <main>
+    <form id="form">
+      <h2 style="margin-top:0;">Novo anúncio</h2>
+
+      <label for="categoria">Categoria</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecione…</option>
+        <option value="carro">Carro</option>
+        <option value="imovel">Imóvel</option>
+        <option value="freelance">Freelance</option>
+      </select>
+
+      <label for="titulo">Título</label>
+      <input id="titulo" name="titulo" required />
+
+      <label for="preco">Preço (R$)</label>
+      <input id="preco" name="preco" type="number" min="0" step="0.01" required />
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao"></textarea>
+
+      <label for="imagemUrl">URL da imagem (opcional)</label>
+      <input id="imagemUrl" name="imagemUrl" type="url" placeholder="https://..." />
+
+      <div id="atributos-dinamicos"></div>
+
+      <button type="submit">Publicar</button>
+      <p id="msg"></p>
+    </form>
+  </main>
+  <script src="/js/api.js"></script>
+  <script src="/js/novo.js"></script>
+</body>
+</html>
