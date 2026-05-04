@@ -34,4 +34,14 @@ async function criar(req, res) {
   res.status(201).json(anuncio);
 }
 
-module.exports = { listar, detalhar, criar };
+async function remover(req, res) {
+  try {
+    const anuncio = await Anuncio.findByIdAndDelete(req.params.id);
+    if (!anuncio) return res.status(404).json({ erro: "Anúncio não encontrado" });
+    res.status(204).end();
+  } catch (e) {
+    res.status(400).json({ erro: "ID inválido" });
+  }
+}
+
+module.exports = { listar, detalhar, criar, remover };

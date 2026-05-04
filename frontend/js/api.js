@@ -12,6 +12,14 @@ async function detalhar(id) {
   return res.json();
 }
 
+async function remover(id) {
+  const res = await fetch(`${API}/${id}`, { method: "DELETE" });
+  if (!res.ok && res.status !== 204) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data.erro || "Erro ao excluir");
+  }
+}
+
 async function criar(payload) {
   const res = await fetch(API, {
     method: "POST",

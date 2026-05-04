@@ -37,7 +37,21 @@ async function carregar() {
       <p>${a.descricao || "Sem descrição."}</p>
       <h3>Detalhes</h3>
       ${renderAtributos(a)}
+      <div class="acoes">
+        <button id="btn-excluir" class="btn-excluir" title="Excluir anúncio" aria-label="Excluir anúncio">
+          🗑️ Excluir anúncio
+        </button>
+      </div>
     `;
+    document.getElementById("btn-excluir").addEventListener("click", async () => {
+      if (!confirm("Tem certeza que deseja excluir este anúncio? Esta ação não pode ser desfeita.")) return;
+      try {
+        await remover(id);
+        location.href = "/";
+      } catch (err) {
+        alert("Erro ao excluir: " + err.message);
+      }
+    });
   } catch (e) {
     div.innerHTML = `<p class="erro">${e.message}</p>`;
   }

@@ -64,6 +64,21 @@ main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
 .detalhe table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
 .detalhe th, .detalhe td { text-align: left; padding: 0.6rem; border-bottom: 1px solid #f0f0f5; }
 .detalhe th { width: 35%; color: #6e6e73; font-weight: 500; }
+.detalhe .acoes { margin-top: 2rem; display: flex; justify-content: flex-end; border-top: 1px solid #f0f0f5; padding-top: 1.5rem; }
+.btn-excluir {
+  padding: 0.6rem 1.2rem;
+  background: #fff;
+  color: #ff3b30;
+  border: 1px solid #ff3b30;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.15s;
+}
+.btn-excluir:hover { background: #ff3b30; color: #fff; }
 
 form { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
 form label { display: block; margin: 1rem 0 0.4rem; font-weight: 500; }
