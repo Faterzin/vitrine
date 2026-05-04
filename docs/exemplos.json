@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Honda Civic 2018 prata",
+    "categoria": "carro",
+    "preco": 78000,
+    "descricao": "Único dono, revisões em concessionária, IPVA 2026 pago.",
+    "imagemUrl": "https://picsum.photos/seed/carro1/600/400",
+    "atributos": {
+      "quilometragem": 65000,
+      "combustivel": "flex",
+      "portas": 4
+    }
+  },
+  {
+    "titulo": "Apartamento 2 quartos no Setor Bueno",
+    "categoria": "imovel",
+    "preco": 350000,
+    "descricao": "Próximo ao Parque Vaca Brava. Andar alto, vista livre.",
+    "imagemUrl": "https://picsum.photos/seed/imovel1/600/400",
+    "atributos": {
+      "metragem": 65,
+      "andar": 8,
+      "vagas": 1
+    }
+  },
+  {
+    "titulo": "Desenvolvedor Node.js sênior — freelance",
+    "categoria": "freelance",
+    "preco": 120,
+    "descricao": "Disponível pra projetos de até 30h semanais. Inglês fluente.",
+    "imagemUrl": "https://picsum.photos/seed/free1/600/400",
+    "atributos": {
+      "stack": ["Node", "PostgreSQL", "AWS", "TypeScript"],
+      "modalidade": "remoto",
+      "valorHora": 120
+    }
+  }
+]
